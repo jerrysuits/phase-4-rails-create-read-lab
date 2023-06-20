@@ -14,7 +14,7 @@ class PlantsController < ApplicationController
      # Create a new plant
      def new_plant
        plant = Plant.create(name: params[:name], image: params[:image], price: params[:price])
-       render json: plant 
+       render json: plant,  status: :created
      end
    end
    
